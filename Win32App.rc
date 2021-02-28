@@ -67,14 +67,14 @@ BEGIN
     BEGIN
         BLOCK "040704b0"
         BEGIN
-            VALUE "CompanyName", "TODO: <Firmenname>"
-            VALUE "FileDescription", "TODO: <Dateibeschreibung>"
-            VALUE "FileVersion", "1.0.0.1"
+            VALUE "CompanyName", "Adv4nc3d"
+            VALUE "FileDescription", "Simple Win32 Application Window."
+            VALUE "FileVersion", "1.0"
             VALUE "InternalName", "Win32App.exe"
-            VALUE "LegalCopyright", "Copyright (C) 2021"
+            VALUE "LegalCopyright", "Copyright (C) 2021 by Adv4nc3d"
             VALUE "OriginalFilename", "Win32App.exe"
-            VALUE "ProductName", "TODO: <Produktname>"
-            VALUE "ProductVersion", "1.0.0.1"
+            VALUE "ProductName", "Win32 Application"
+            VALUE "ProductVersion", "1.0"
         END
     END
     BLOCK "VarFileInfo"
