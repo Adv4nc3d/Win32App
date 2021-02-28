@@ -1,13 +1,37 @@
+/**
+* 
+* Win32 Application
+* by Adv4nc3d
+* 
+* Copyright 2021. All Rights Reserved.
+* 
+* main.cpp
+* 
+*/
 
 
+// Pre Header
 #include "pch.h"
 
 
 
 
-int main()
+/**
+* 
+* int
+* WINAPI (__stdcall)
+* wWinMain
+* 
+* HINSTANCE hInstance						#
+* HINSTANCE hPrevInstance					#
+* PWSTR pCmdLine							#
+* int nCmdShow								#
+* 
+*/
+
+int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow)
 {
-	std::cout << "Hello World" << std::endl;
+
 
 	return 0;
 }
