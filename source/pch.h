@@ -16,14 +16,11 @@
 
 
 
+// Windows SDK
 #include <Windows.h>
 
-
-
-
+// Application
 #include "application/application.h"
-
-
 
 
 

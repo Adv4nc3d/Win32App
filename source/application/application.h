@@ -38,4 +38,7 @@ public:
 	bool Initialize();
 };
 
+
+
+
 #endif
