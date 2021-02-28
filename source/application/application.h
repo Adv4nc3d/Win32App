@@ -31,8 +31,8 @@ public:
 	// Constructor
 	theApp()
 	{
-		lpWindowClass = L"AI_MAIN";
-		lpTitle = L"Advanced Intelligence";
+		lpWindowClass = L"APP_MAIN";
+		lpTitle = L"Win32 Application";
 		hInstance = NULL;
 		hwnd = NULL;
 	}

@@ -56,8 +56,5 @@
     <None Include="LICENSE">
       <Filter>Resources</Filter>
     </None>
-    <None Include="README.md">
-      <Filter>Resources</Filter>
-    </None>
   </ItemGroup>
 </Project>
