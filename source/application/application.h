@@ -16,8 +16,6 @@
 #define APPWM_ICONNOTIFY (WM_APP + 1)
 
 
-
-
 /**
 * 
 * class
@@ -110,8 +108,6 @@ public:
 inline theApp* Application = nullptr;
 
 
-
-
 /**
 *
 * extern
@@ -119,8 +115,6 @@ inline theApp* Application = nullptr;
 */
 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
-
-
 
 
 #endif

@@ -14,8 +14,6 @@
 #define PCH_H
 
 
-
-
 // Modern Windows Common Controls
 #pragma comment(linker,"\"/manifestdependency:type='win32' \
 name='Microsoft.Windows.Common-Controls' version='6.0.0.0' \
@@ -25,8 +23,6 @@ processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
 #ifdef _MSC_VER
 #define _CRT_SECURE_NO_WARNINGS
 #endif
-
-
 
 
 /**
@@ -46,8 +42,6 @@ processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
 #include <strsafe.h>
 
 
-
-
 /**
 *
 * Application
@@ -59,8 +53,6 @@ processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
 
 // Application
 #include "application/application.h"
-
-
 
 
 #endif

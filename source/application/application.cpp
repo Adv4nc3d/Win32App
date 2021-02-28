@@ -15,7 +15,15 @@
 
 
 
-
+/**
+*
+* bool
+* theApp (class)
+* Initialize
+*
+* HINSTANCE hAppInstance					# handle to the current instance of the application
+*
+*/
 
 bool theApp::Initialize(HINSTANCE hAppInstance)
 {
@@ -33,6 +41,14 @@ bool theApp::Initialize(HINSTANCE hAppInstance)
 	return true;
 }
 
+
+/**
+*
+* void
+* theApp (class)
+* NotifyIcon
+*
+*/
 
 void theApp::NotifyIcon()
 {
@@ -52,34 +68,58 @@ void theApp::NotifyIcon()
 }
 
 
+/**
+*
+* LRESULT (LONG_PTR)
+* CALLBACK (__stdcall)
+* WindowProc
+*
+* HWND hwnd									# handle to the application
+* UINT uMsg									# application window messages
+* WPARAM wParam								# additional message information
+* LPARAM lParam								# additional message information
+*
+*/
+
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
 	switch (uMsg)
 	{
-	case WM_DESTROY:
-	{
-		if (Application)
-			Application->Shutdown();
+		// WM DESTROY
+		case WM_DESTROY:
+		{
+			// Shutdown Application
+			if (Application)
+				Application->Shutdown();
+
+			return 0;
+		}
+
+		// WM PAINT
+		case WM_PAINT:
+		{
+			PAINTSTRUCT ps;
+			HDC hdc = BeginPaint(hwnd, &ps);
+
+			FillRect(hdc, &ps.rcPaint, (HBRUSH)(COLOR_WINDOW + 1));
+
+			EndPaint(hwnd, &ps);
+		}
 
 		return 0;
-	}
-
-	case WM_PAINT:
-	{
-		PAINTSTRUCT ps;
-		HDC hdc = BeginPaint(hwnd, &ps);
-
-		FillRect(hdc, &ps.rcPaint, (HBRUSH)(COLOR_WINDOW + 1));
-
-		EndPaint(hwnd, &ps);
-	}
-
-	return 0;
 	}
 
 	return DefWindowProc(hwnd, uMsg, wParam, lParam);
 }
 
+
+/**
+*
+* void
+* theApp (class)
+* NotifyIcon
+*
+*/
 
 ATOM theApp::RegisterAppClass()
 {
@@ -96,13 +136,21 @@ ATOM theApp::RegisterAppClass()
 	wndClassEx.hInstance = hInstance;
 	wndClassEx.lpfnWndProc = WindowProc;
 	wndClassEx.lpszClassName = lpWindowClass;
-	wndClassEx.lpszMenuName = NULL;// MAKEINTRESOURCE(IDR_MENU);
+	wndClassEx.lpszMenuName = MAKEINTRESOURCE(IDR_MENU);
 	wndClassEx.style = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
 
 	// Register Window Class
 	return RegisterClassEx(&wndClassEx);
 }
 
+
+/**
+*
+* bool
+* theApp (class)
+* CreateWnd
+*
+*/
 
 bool theApp::CreateWnd()
 {
@@ -126,21 +174,28 @@ bool theApp::CreateWnd()
 		(((rc.top + rc.bottom) / 2) - height / 2),
 		width, height,
 		NULL,
-		NULL,//(HMENU)hMenu,
+		hMenu,
 		hInstance,
 		NULL
 	);
 
 	if (!hwnd)
 	{
-		MessageBox(NULL, L"ERROR CreateWindowEx", L"ERROR", MB_OK);
-
+		//MessageBox(NULL, L"ERROR CreateWindowEx", L"ERROR", MB_OK);
 		return false;
 	}
 
 	return true;
 }
 
+
+/**
+*
+* void
+* theApp (class)
+* Run
+*
+*/
 
 void theApp::Run()
 {
@@ -167,6 +222,14 @@ void theApp::Run()
 	}
 }
 
+
+/**
+*
+* void
+* theApp (class)
+* Shutdown
+*
+*/
 
 void theApp::Shutdown()
 {
