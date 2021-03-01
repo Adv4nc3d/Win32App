@@ -53,6 +53,7 @@ processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
 
 // Application
 #include "application/application.h"
+#include "application/ui.h"
 
 
 #endif

@@ -30,6 +30,9 @@
     <ClCompile Include="source\pch.cpp">
       <Filter>Header\Pre-Header</Filter>
     </ClCompile>
+    <ClCompile Include="source\application\ui.cpp">
+      <Filter>Source\Application</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\application\application.h">
@@ -40,6 +43,9 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\application\ui.h">
+      <Filter>Source\Application</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

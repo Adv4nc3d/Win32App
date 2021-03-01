@@ -49,11 +49,8 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine
 		// Initialize Application
 		Application->Initialize(hInstance);
 
-		// Set Application Window Size
-		Application->SetWindowSize(1024, 768);
-
 		// Create Application Window
-		Application->CreateWnd();
+		Application->CreateWnd(1024, 768);
 
 		// Run Application
 		Application->Run();

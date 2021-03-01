@@ -63,16 +63,6 @@ public:
 		return hInstance;
 	}
 
-	// Initial Application Window Size
-	int width = 800;
-	int height = 600;
-
-	// Set Application Window Size
-	int SetWindowSize(int APP_WIDTH, int APP_HEIGHT)
-	{
-		return width = APP_WIDTH, height = APP_HEIGHT;
-	}
-
 private:
 	// Application Menu
 	HMENU hMenu = NULL;
@@ -99,7 +89,7 @@ public:
 	bool Initialize(HINSTANCE hAppInstance);
 	void NotifyIcon();
 	ATOM RegisterAppClass();
-	bool CreateWnd();
+	bool CreateWnd(int width, int height);
 	void Run();
 	void Shutdown();
 };

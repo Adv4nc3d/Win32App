@@ -30,8 +30,7 @@ bool theApp::Initialize(HINSTANCE hAppInstance)
 	// Check Instance
 	if (hAppInstance == NULL)
 	{
-		MessageBox(NULL, L"ERROR APP hInstance", L"ERROR", MB_OK);
-
+		//MessageBox(NULL, L"ERROR APP hInstance", L"ERROR", MB_OK);
 		return false;
 	}
 
@@ -93,7 +92,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 				Application->Shutdown();
 
 			return 0;
-		}
+		} break;
 
 		// WM PAINT
 		case WM_PAINT:
@@ -104,9 +103,30 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 			FillRect(hdc, &ps.rcPaint, (HBRUSH)(COLOR_WINDOW + 1));
 
 			EndPaint(hwnd, &ps);
-		}
+		} break;
 
-		return 0;
+		// WM COMMAND
+		case WM_COMMAND:
+		{
+			// Handle Button Commands
+			if (Application)
+				HandleButtonCmd(hwnd, wParam, Application->GetInstance());
+
+			DefWindowProc(hwnd, uMsg, wParam, lParam);
+		} break;
+
+		// APPWM ICONNOTIFY
+		case APPWM_ICONNOTIFY:
+		{
+			// Handle Icon Notify
+			HandleIconNotify(lParam, hwnd);
+		} break;
+
+		// DEFAULT
+		default:
+		{
+			return DefWindowProc(hwnd, uMsg, wParam, lParam);
+		}
 	}
 
 	return DefWindowProc(hwnd, uMsg, wParam, lParam);
@@ -152,7 +172,7 @@ ATOM theApp::RegisterAppClass()
 *
 */
 
-bool theApp::CreateWnd()
+bool theApp::CreateWnd(int width, int height)
 {
 	// Register Application Window Class
 	if (!RegisterAppClass())
@@ -254,7 +274,7 @@ void theApp::Shutdown()
 
 	if (!unRegisterWndClass)
 	{
-		//int err_code = GetLastError();
+		int err_code = GetLastError();
 		//MessageBox(NULL, to_string(err_code).c_str(), "ERROR", NULL);
 	}
 
