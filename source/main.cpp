@@ -47,10 +47,12 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine
 	if (Application != nullptr)
 	{
 		// Initialize Application
-		Application->Initialize(hInstance);
+		if (!Application->Initialize(hInstance))
+			return 0;
 
 		// Create Application Window
-		Application->CreateWnd(1024, 768);
+		if (!Application->CreateWnd(1024, 768))
+			return 0;
 
 		// Run Application
 		Application->Run();
