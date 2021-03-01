@@ -44,7 +44,6 @@ void HandleButtonCmd(HWND hwnd, WPARAM wParam, HINSTANCE hInstance)
 			Button Controls
 		*/
 
-		
 
 		/*
 			Context Menu Controls
