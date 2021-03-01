@@ -1,7 +1,0 @@
-﻿################################################################################
-# Diese .gitignore-Datei wurde von Microsoft(R) Visual Studio automatisch erstellt.
-################################################################################
-
-/.vs/Win32App/v16
-/build/x64
-/temp/x64
