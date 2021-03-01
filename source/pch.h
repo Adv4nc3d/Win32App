@@ -44,14 +44,12 @@ processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
 
 /**
 *
-* Application
+* Win32 Application
 *
 */
 
-// Resources
-#include "../resource.h"
-
 // Application
+#include "application/resource.h"
 #include "application/application.h"
 #include "application/ui.h"
 

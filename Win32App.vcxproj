@@ -184,8 +184,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="resource.h" />
     <ClInclude Include="source\application\application.h" />
+    <ClInclude Include="source\application\resource.h" />
     <ClInclude Include="source\application\ui.h" />
     <ClInclude Include="source\pch.h" />
   </ItemGroup>
