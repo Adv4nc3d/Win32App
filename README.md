@@ -42,20 +42,24 @@ Simple Win32 (Unicode) Application including Menu and Taskbar Notify Icon.
 Application = new theApp();
 ```
 
+
 ### Initialize Application
 ```c++
 Application->Initialize(instance);
 ```
+
 
 ### Create Application Window
 ```c++
 Application->CreateWnd(width, height);
 ```
 
+
 ### Run Application
 ```c++
 Application->Run();
 ```
+
 
 ### Shutdown Application
 ```c++
