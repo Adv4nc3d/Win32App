@@ -64,6 +64,6 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine
 		Application = 0;
 		delete Application;
 	}
-
+	
 	return 0;
 }
