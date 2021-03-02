@@ -29,3 +29,36 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+
+
+# General
+Simple Win32 (Unicode) Application including Menu and Taskbar Notify Icon.
+
+
+
+# Win32 Application
+### Create new Object of theApp
+```c++
+Application = new theApp();
+```
+
+### Initialize Application
+```c++
+Application->Initialize(instance);
+```
+
+### Create Application Window
+```c++
+Application->CreateWnd(width, height);
+```
+
+### Run Application
+```c++
+Application->Run();
+```
+
+### Shutdown Application
+```c++
+Application->Shutdown();
+```
+
