@@ -37,31 +37,31 @@ Simple Win32 (Unicode) Application including Menu and Taskbar Notify Icon.
 
 
 # Win32 Application
-### Create new Object of theApp
+### Create new Object
 ```c++
 Application = new theApp();
 ```
 
 
-### Initialize Application
+### Initialize
 ```c++
 Application->Initialize(instance);
 ```
 
 
-### Create Application Window
+### Create Window
 ```c++
 Application->CreateWnd(width, height);
 ```
 
 
-### Run Application
+### Run
 ```c++
 Application->Run();
 ```
 
 
-### Shutdown Application
+### Shutdown
 ```c++
 Application->Shutdown();
 ```
