@@ -22,8 +22,8 @@
 * 
 * HINSTANCE hInstance						# handle to the current instance of the application
 * HINSTANCE hPrevInstance					# handle to the previous instance of the application
-* PWSTR pCmdLine							# command line for the application, excluding the program name
-* int nCmdShow								# application run window status (normal, minimized, maximized)
+* PWSTR pCmdLine						# command line for the application, excluding the program name
+* int nCmdShow							# application run window status (normal, minimized, maximized)
 * 
 * MSDN: https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-winmain
 * 
