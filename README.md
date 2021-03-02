@@ -39,7 +39,7 @@ Simple Win32 (Unicode) Application including Menu and Taskbar Notify Icon.
 # Win32 Application
 ### Create new Object
 ```c++
-Application = new theApp();
+theApp* Application = new theApp();
 ```
 
 
